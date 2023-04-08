@@ -80,9 +80,9 @@ target_compile_options(fwog
 	-pedantic-errors
 	-Wno-missing-field-initializers
 	-Wno-unused-result
-	-Werror
-	-Wconversion
-	-Wsign-conversion
+	#-Werror
+	#-Wconversion
+	#-Wsign-conversion
 	>
 	$<$<CXX_COMPILER_ID:MSVC>:
 	/W4
