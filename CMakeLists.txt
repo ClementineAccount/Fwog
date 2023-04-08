@@ -73,16 +73,16 @@ else()
 endif()
 
 target_compile_options(fwog
-	INTERFACE
+	PRIVATE
 	$<$<OR:$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>,${COMPILER_CLANGPP}>:
 	-Wall
 	-Wextra
 	-pedantic-errors
 	-Wno-missing-field-initializers
 	-Wno-unused-result
-	#-Werror
-	#-Wconversion
-	#-Wsign-conversion
+	-Werror
+	-Wconversion
+	-Wsign-conversion
 	>
 	$<$<CXX_COMPILER_ID:MSVC>:
 	/W4
