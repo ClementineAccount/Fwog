@@ -85,7 +85,7 @@ target_compile_options(fwog
 	#-Wsign-conversion
 	>
 	$<$<CXX_COMPILER_ID:MSVC>:
-	/W4
+	/W3
 	/WX
 	/permissive-
 	/wd4324 # structure was padded
